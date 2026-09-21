@@ -109,6 +109,240 @@
                     </div>
                 </a>
 
+            <!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physics Premium Classes</title>
+    <style>
+        /* पूरे पेज का लेआउट */
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* मुख्य कंटेनर जिसमें कोर्स और लॉगिन रहेगा */
+        .premium-box {
+            max-width: 850px;
+            margin: 40px auto;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+            padding: 24px;
+            box-sizing: border-box;
+        }
+
+        /* 1. होरिजेंटल लॉगिन बार */
+        .horizontal-login-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #1e293b; 
+            padding: 14px 20px;
+            border-radius: 8px;
+            margin-bottom: 24px;
+            color: #ffffff;
+        }
+
+        .bar-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #38bdf8; 
+        }
+
+        .login-inputs {
+            display: flex;
+            gap: 12px;
+        }
+
+        .login-inputs input {
+            padding: 8px 14px;
+            border: 1px solid #475569;
+            border-radius: 6px;
+            font-size: 14px;
+            background-color: #334155;
+            color: #ffffff;
+            outline: none;
+        }
+
+        .login-inputs input::placeholder {
+            color: #94a3b8;
+        }
+
+        /* बटन स्टाइल */
+        .btn-style {
+            padding: 8px 18px;
+            background-color: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 14px;
+            transition: background 0.2s;
+        }
+
+        .btn-style:hover {
+            background-color: #1d4ed8;
+        }
+
+        .btn-logout {
+            background-color: #dc2626;
+        }
+
+        .btn-logout:hover {
+            background-color: #b91c1c;
+        }
+
+        /* 2. वीडियो प्लेयर एरिया (16:9 अनुपात) */
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%; 
+            background-color: #0f172a;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* 3. लॉक स्क्रीन ओवरले (लॉगिन से पहले) */
+        .lock-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.9));
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .lock-overlay h2 {
+            margin: 0 0 12px 0;
+            color: #f59e0b; 
+            font-size: 22px;
+        }
+
+        .lock-overlay p {
+            margin: 0;
+            color: #cbd5e1;
+            font-size: 15px;
+        }
+
+        /* छुपाने के लिए क्लास */
+        .hidden {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+
+<div class="premium-box">
+    
+    <!-- ऊपर का होरिजेंटल लॉगिन बार -->
+    <div class="horizontal-login-bar">
+        <div class="bar-title">⚡ Physics Premium Live Class</div>
+        
+        <!-- जब छात्र लॉगिन नहीं है -->
+        <div id="logged-out-view" class="login-inputs">
+            <input type="email" id="email" placeholder="अपना ईमेल डालें">
+            <input type="password" id="password" placeholder="पासवर्ड डालें">
+            <button class="btn-style" onclick="triggerLogin()">लॉगिन करें</button>
+        </div>
+
+        <!-- जब छात्र लॉगिन कर लेगा -->
+        <div id="logged-in-view" class="hidden">
+            <span style="margin-right: 15px; color: #4ade80; font-weight: 600;">✓ एक्सेस अनलॉक हो गया</span>
+            <button class="btn-style btn-logout" onclick="triggerLogout()">लॉगआउट</button>
+        </div>
+    </div>
+
+    <!-- नीचे का वीडियो प्लेयर बॉक्स -->
+    <div class="video-wrapper">
+        
+        <!-- डिफ़ॉल्ट लॉक स्क्रीन -->
+        <div id="lock-screen" class="lock-overlay">
+            <h2>🔒 आज की पेड क्लास लॉक है</h2>
+            <p>कृपया रोजाना की लाइव क्लास अटेंड करने के लिए ऊपर बने बार से लॉगिन करें।</p>
+        </div>
+
+        <!-- असली वीडियो प्लेयर स्क्रीन जो लॉगिन के बाद खुलेगी -->
+        <div id="player-screen" class="hidden" style="width:100%; height:100%;">
+            <iframe id="physics-live-stream" src="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        
+    </div>
+
+</div>
+
+<script>
+    // टेस्ट करने के लिए यहाँ एक डेमो Unlisted वीडियो ID डाल दी है।
+    // जब आप लाइव आएं, तो बस इस वेरिएबल में उस दिन का लिंक डाल दें (जैसे "dQw4w9WgXcQ")
+    const testVideoId = "dQw4w9WgXcQ"; 
+
+    // लॉगिन बटन का लॉजिक
+    function triggerLogin() {
+        const emailInput = document.getElementById('email').value;
+        const passwordInput = document.getElementById('password').value;
+
+        if(emailInput === "" || passwordInput === "") {
+            alert("सर/स्टूडेंट, कृपया ईमेल और पासवर्ड दोनों भरें!");
+            return;
+        }
+
+        // 1. लॉगिन बार बदलें
+        document.getElementById('logged-out-view').classList.add('hidden');
+        document.getElementById('logged-in-view').classList.remove('hidden');
+
+        // 2. वीडियो का लॉक खोलें
+        document.getElementById('lock-screen').classList.add('hidden');
+        document.getElementById('player-screen').classList.remove('hidden');
+
+        // 3. YouTube वीडियो का सोर्स लोड करें
+        const videoPlayer = document.getElementById('physics-live-stream');
+        videoPlayer.src = `https://youtube.com{testVideoId}?autoplay=1&modestbranding=1&rel=0`;
+    }
+
+    // लॉगआउट बटन का लॉजिक
+    function triggerLogout() {
+        // 1. वापस इनपुट्स दिखाएं
+        document.getElementById('logged-in-view').classList.add('hidden');
+        document.getElementById('logged-out-view').classList.remove('hidden');
+
+        // 2. प्लेयर छुपाएं और लॉक स्क्रीन वापस लाएं
+        document.getElementById('player-screen').classList.add('hidden');
+        document.getElementById('lock-screen').classList.remove('hidden');
+
+        // 3. वीडियो को तुरंत बंद करें
+        const videoPlayer = document.getElementById('physics-live-stream');
+        videoPlayer.src = "";
+
+        // इनपुट फ़ील्ड्स को साफ करें
+        document.getElementById('email').value = "";
+        document.getElementById('password').value = "";
+    }
+</script>
+
+</body>
+</html>
+
                 <!-- Desktop Nav -->
                 <nav class="hidden md:flex items-center space-x-6 text-sm font-medium text-slate-600">
                     <a href="#home" class="hover:text-sky-600 transition-colors">Home</a>
