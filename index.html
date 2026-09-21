@@ -8,15 +8,15 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #0d1117; color: #e6edf3; scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; background-color: #ffffff; color: #1f2937; scroll-behavior: smooth; }
         h1, h2, h3, h4, h5, .math-font { font-family: 'Lora', serif; }
         
-        /* 3b1b inspired theme: Dark space background with elegant blue/gold accents */
-        .glass-nav { background: rgba(13, 17, 23, 0.85); backdrop-filter: blur(10px); border-bottom: 1px solid #30363d; }
-        .accent-text { color: #58a6ff; }
-        .accent-bg { background-color: #58a6ff; }
-        .accent-hover:hover { background-color: #3178c6; }
-        .gold-text { color: #d2a8ff; }
+        /* Elegant White Theme with Emerald Green and Gold Accents */
+        .glass-nav { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid #e5e7eb; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); }
+        .accent-text { color: #059669; } /* Emerald Green */
+        .accent-bg { background-color: #059669; }
+        .accent-hover:hover { background-color: #047857; }
+        .gold-text { color: #d4af37; } /* Elegant Gold */
         
         .pulse-btn {
             animation: pulse 2s infinite;
@@ -28,14 +28,15 @@
         }
         
         .khazana-card {
-            background: linear-gradient(145deg, #161b22, #0d1117);
-            border: 1px solid #30363d;
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .khazana-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
-            border-color: #58a6ff;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            border-color: #059669;
         }
 
         .video-container {
@@ -44,7 +45,8 @@
             height: 0;
             overflow: hidden;
             border-radius: 0.5rem;
-            border: 1px solid #30363d;
+            border: 1px solid #e5e7eb;
+            background: #f3f4f6;
         }
         .video-container iframe {
             position: absolute;
@@ -54,10 +56,11 @@
             height: 100%;
         }
 
-        /* Subtle grid background for math feel */
+        /* Clean White Pattern */
         .hero-bg {
-            background-image: radial-gradient(circle at center, rgba(88, 166, 255, 0.1) 0%, transparent 70%), 
-                              url('data:image/svg+xml;utf8,<svg width="40" height="40" xmlns="http://www.w3.org/2000/svg"><circle cx="20" cy="20" r="1" fill="rgba(255,255,255,0.05)"/></svg>');
+            background-color: #ffffff;
+            background-image: radial-gradient(circle at center, rgba(5, 150, 105, 0.05) 0%, transparent 70%), 
+                              url('data:image/svg+xml;utf8,<svg width="40" height="40" xmlns="http://www.w3.org/2000/svg"><circle cx="20" cy="20" r="1" fill="rgba(0,0,0,0.03)"/></svg>');
         }
     </style>
 </head>
@@ -73,17 +76,17 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16 items-center">
                 <div class="flex-shrink-0 flex items-center cursor-pointer">
-                    <span class="math-font text-2xl font-bold text-white tracking-wider">Saem<span class="accent-text">Physics</span></span>
+                    <span class="math-font text-2xl font-bold text-gray-900 tracking-wider">Saem<span class="accent-text">Physics</span></span>
                 </div>
-                <div class="hidden md:flex space-x-6 text-sm font-medium">
-                    <a href="#home" class="hover:text-[#58a6ff] transition">Home</a>
-                    <a href="#lectures" class="hover:text-[#58a6ff] transition">Lectures</a>
-                    <a href="#dpp" class="hover:text-[#58a6ff] transition">Khazana</a>
-                    <a href="#predicted" class="hover:text-[#58a6ff] transition">Predicted Qs</a>
-                    <a href="#faculty" class="hover:text-[#58a6ff] transition">About Sir</a>
+                <div class="hidden md:flex space-x-6 text-sm font-medium text-gray-600">
+                    <a href="#home" class="hover:text-[#059669] transition">Home</a>
+                    <a href="#lectures" class="hover:text-[#059669] transition">Lectures</a>
+                    <a href="#dpp" class="hover:text-[#059669] transition">Khazana</a>
+                    <a href="#predicted" class="hover:text-[#059669] transition">Predicted Qs</a>
+                    <a href="#faculty" class="hover:text-[#059669] transition">About Sir</a>
                 </div>
                 <div class="hidden md:flex">
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeXiIEqRcGyYHgB42B7ju9SfwtoGofO1gxcr0qcWfXOnxO8Xg/viewform" target="_blank" class="accent-bg accent-hover text-white px-5 py-2 rounded-md font-semibold transition shadow-[0_0_15px_rgba(88,166,255,0.3)]">Free Demo Class</a>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeXiIEqRcGyYHgB42B7ju9SfwtoGofO1gxcr0qcWfXOnxO8Xg/viewform" target="_blank" class="accent-bg accent-hover text-white px-5 py-2 rounded-md font-semibold transition shadow-md">Free Demo Class</a>
                 </div>
             </div>
         </div>
@@ -92,69 +95,69 @@
     <!-- Hero Section -->
     <section id="home" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden hero-bg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-            <div class="inline-block mb-4 px-3 py-1 rounded-full border border-[#30363d] bg-[#161b22] text-xs font-semibold tracking-wide text-[#8b949e]">
+            <div class="inline-block mb-4 px-4 py-1.5 rounded-full border border-gray-200 bg-white shadow-sm text-xs font-bold tracking-wide text-gray-500">
                 NEET • JEE • MIT • OLYMPIAD
             </div>
-            <h1 class="math-font text-5xl md:text-7xl font-extrabold text-white mb-6 leading-tight">
+            <h1 class="math-font text-5xl md:text-7xl font-extrabold text-gray-900 mb-6 leading-tight">
                 Deep Understanding <br> of <span class="accent-text">The Universe.</span>
             </h1>
-            <p class="mt-4 text-xl md:text-2xl text-[#8b949e] max-w-3xl mx-auto font-light mb-10">
+            <p class="mt-4 text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto font-light mb-10">
                 Physics is my Business. Join Muhammad Saem Sir for the most refined academic content, crafted beautifully for ultimate clarity.
             </p>
             <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeXiIEqRcGyYHgB42B7ju9SfwtoGofO1gxcr0qcWfXOnxO8Xg/viewform" target="_blank" class="accent-bg accent-hover text-white px-8 py-4 rounded-lg text-lg font-bold transition shadow-[0_0_20px_rgba(88,166,255,0.4)] hover:shadow-[0_0_30px_rgba(88,166,255,0.6)] w-full sm:w-auto">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeXiIEqRcGyYHgB42B7ju9SfwtoGofO1gxcr0qcWfXOnxO8Xg/viewform" target="_blank" class="accent-bg accent-hover text-white px-8 py-4 rounded-lg text-lg font-bold transition shadow-lg hover:shadow-xl w-full sm:w-auto">
                     Book a Free Demo Class <i class="fas fa-arrow-right ml-2"></i>
                 </a>
             </div>
 
             <!-- YouTube Stats Counters -->
-            <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto border-t border-[#30363d] pt-10">
+            <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto border-t border-gray-200 pt-10">
                 <div>
-                    <h3 class="text-4xl font-bold accent-text">9.5K+</h3>
-                    <p class="text-[#8b949e] mt-1">Subscribers</p>
+                    <h3 class="text-4xl font-bold text-gray-900">9.5K+</h3>
+                    <p class="text-gray-500 mt-1 font-medium">Subscribers</p>
                 </div>
                 <div>
-                    <h3 class="text-4xl font-bold accent-text">350+</h3>
-                    <p class="text-[#8b949e] mt-1">Video Lectures</p>
+                    <h3 class="text-4xl font-bold text-gray-900">350+</h3>
+                    <p class="text-gray-500 mt-1 font-medium">Video Lectures</p>
                 </div>
                 <div>
-                    <h3 class="text-4xl font-bold accent-text">100%</h3>
-                    <p class="text-[#8b949e] mt-1">Conceptual Clarity</p>
+                    <h3 class="text-4xl font-bold text-gray-900">100%</h3>
+                    <p class="text-gray-500 mt-1 font-medium">Conceptual Clarity</p>
                 </div>
                 <div>
-                    <h3 class="text-4xl font-bold accent-text">24/7</h3>
-                    <p class="text-[#8b949e] mt-1">Mentorship</p>
+                    <h3 class="text-4xl font-bold text-gray-900">24/7</h3>
+                    <p class="text-gray-500 mt-1 font-medium">Mentorship</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Faculty & Mentorship Section -->
-    <section id="faculty" class="py-20 bg-[#0d1117]">
+    <section id="faculty" class="py-20 bg-gray-50 border-y border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="lg:flex lg:items-center lg:space-x-16">
                 <div class="lg:w-1/2 mb-10 lg:mb-0">
-                    <div class="relative w-full h-96 bg-gradient-to-br from-[#161b22] to-[#0d1117] border border-[#30363d] rounded-2xl flex items-center justify-center overflow-hidden shadow-2xl">
+                    <div class="relative w-full h-96 bg-white border border-gray-200 rounded-2xl flex items-center justify-center overflow-hidden shadow-xl">
                         <!-- Abstract Math/Physics Animation Placeholder -->
-                        <i class="fas fa-atom text-9xl text-[#58a6ff] opacity-20 absolute" style="animation: spin 20s linear infinite;"></i>
+                        <i class="fas fa-atom text-9xl text-[#059669] opacity-10 absolute" style="animation: spin 20s linear infinite;"></i>
                         <div class="text-center z-10">
-                            <h3 class="math-font text-3xl text-white font-bold">Muhammad Saem Sir</h3>
-                            <p class="text-[#8b949e] mt-2">Physics Specialist & Mentor</p>
+                            <h3 class="math-font text-3xl text-gray-900 font-bold">Muhammad Saem Sir</h3>
+                            <p class="text-gray-500 mt-2 font-medium">Physics Specialist & Mentor</p>
                         </div>
                     </div>
                 </div>
                 <div class="lg:w-1/2">
-                    <h2 class="math-font text-3xl md:text-4xl font-bold text-white mb-6">Meet Your Mentor</h2>
-                    <p class="text-lg text-[#8b949e] mb-6 leading-relaxed">
+                    <h2 class="math-font text-3xl md:text-4xl font-bold text-gray-900 mb-6">Meet Your Mentor</h2>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
                         With hundreds of detailed physics lectures and a community of thousands on YouTube, Saem Sir simplifies the universe into beautiful, intuitive mathematical concepts. 
                     </p>
-                    <ul class="space-y-4 text-[#8b949e]">
-                        <li class="flex items-start"><i class="fas fa-check-circle text-[#238636] mt-1 mr-3"></i> Dedicated to offering the most refined academic content.</li>
-                        <li class="flex items-start"><i class="fas fa-check-circle text-[#238636] mt-1 mr-3"></i> Expert in CBSE, JEE Main/Advanced, and NEET curriculum.</li>
-                        <li class="flex items-start"><i class="fas fa-check-circle text-[#238636] mt-1 mr-3"></i> Unmatched focus on visualization and mathematical rigor.</li>
+                    <ul class="space-y-4 text-gray-600 font-medium">
+                        <li class="flex items-start"><i class="fas fa-check-circle text-[#059669] mt-1 mr-3"></i> Dedicated to offering the most refined academic content.</li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-[#059669] mt-1 mr-3"></i> Expert in CBSE, JEE Main/Advanced, and NEET curriculum.</li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-[#059669] mt-1 mr-3"></i> Unmatched focus on visualization and mathematical rigor.</li>
                     </ul>
                     <div class="mt-8">
-                        <a href="https://youtube.com/@SaemPhysics" target="_blank" class="inline-flex items-center text-white bg-[#da3633] hover:bg-[#b32d2a] px-5 py-2 rounded-md font-semibold transition">
+                        <a href="https://youtube.com/@SaemPhysics" target="_blank" class="inline-flex items-center text-white bg-[#da3633] hover:bg-[#b32d2a] px-5 py-3 rounded-md font-bold transition shadow-md">
                             <i class="fab fa-youtube mr-2"></i> Subscribe on YouTube
                         </a>
                     </div>
@@ -164,28 +167,28 @@
     </section>
 
     <!-- Lectures Section -->
-    <section id="lectures" class="py-20 bg-[#161b22] border-y border-[#30363d]">
+    <section id="lectures" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="math-font text-3xl md:text-4xl font-bold text-white mb-4">Deep Physics Lectures</h2>
-                <p class="text-[#8b949e] max-w-2xl mx-auto">Masterpieces dynamically embedded from our YouTube playlists. Experience a randomized deep dive every time you learn.</p>
+                <h2 class="math-font text-3xl md:text-4xl font-bold text-gray-900 mb-4">Deep Physics Lectures</h2>
+                <p class="text-gray-500 max-w-2xl mx-auto text-lg">Masterpieces dynamically embedded from our YouTube playlists. Experience a randomized deep dive every time you learn.</p>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="videoGrid">
-                <!-- Videos injected via JS to ensure randomization -->
+                <!-- Videos injected via JS -->
             </div>
         </div>
     </section>
 
     <!-- DPP & Khazana Section -->
-    <section id="dpp" class="py-20 bg-[#0d1117]">
+    <section id="dpp" class="py-20 bg-gray-50 border-y border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-12 border-b border-[#30363d] pb-6">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-12 border-b border-gray-200 pb-6">
                 <div>
-                    <h2 class="math-font text-3xl md:text-4xl font-bold text-white mb-2"><i class="fas fa-gem text-[#d2a8ff] mr-3"></i>Khazana: Study Material & DPPs</h2>
-                    <p class="text-[#8b949e]">The ultimate treasure trove of resources, integrated seamlessly.</p>
+                    <h2 class="math-font text-3xl md:text-4xl font-bold text-gray-900 mb-2"><i class="fas fa-gem text-[#d4af37] mr-3"></i>Khazana: Study Material & DPPs</h2>
+                    <p class="text-gray-500 text-lg">The ultimate treasure trove of resources, integrated seamlessly.</p>
                 </div>
-                <a href="https://t.me/easyphysicsclasses" target="_blank" class="mt-4 sm:mt-0 inline-flex items-center text-[#58a6ff] hover:text-white transition">
+                <a href="https://t.me/easyphysicsclasses" target="_blank" class="mt-4 sm:mt-0 inline-flex items-center text-[#059669] font-bold hover:text-[#047857] transition">
                     <i class="fab fa-telegram text-2xl mr-2"></i> Join Telegram Channel
                 </a>
             </div>
@@ -193,14 +196,14 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Card 1 -->
                 <div class="khazana-card rounded-xl p-6 flex flex-col h-full">
-                    <div class="bg-[#21262d] w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                        <i class="fas fa-file-pdf text-red-400 text-xl"></i>
+                    <div class="bg-red-50 w-12 h-12 rounded-lg flex items-center justify-center mb-4 border border-red-100">
+                        <i class="fas fa-file-pdf text-red-500 text-xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-2">Mechanics DPP Vol 1</h3>
-                    <p class="text-[#8b949e] text-sm mb-6 flex-grow">Contains high-order thinking questions on Kinematics and NLM with detailed solutions.</p>
-                    <div class="flex items-center justify-between mt-auto pt-4 border-t border-[#30363d]">
-                        <span class="text-lg font-bold text-white">₹99</span>
-                        <button class="bg-[#f6c65b] text-black px-4 py-2 rounded font-semibold text-sm hover:bg-[#e5b54a] transition flex items-center">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Mechanics DPP Vol 1</h3>
+                    <p class="text-gray-600 text-sm mb-6 flex-grow">Contains high-order thinking questions on Kinematics and NLM with detailed solutions.</p>
+                    <div class="flex items-center justify-between mt-auto pt-4 border-t border-gray-100">
+                        <span class="text-lg font-bold text-gray-900">₹99</span>
+                        <button class="bg-[#ffc439] text-black px-4 py-2 rounded font-bold text-sm hover:bg-[#eebb33] transition flex items-center shadow-sm">
                             <i class="fab fa-paypal mr-2"></i> Buy Now
                         </button>
                     </div>
@@ -208,14 +211,14 @@
                 
                 <!-- Card 2 -->
                 <div class="khazana-card rounded-xl p-6 flex flex-col h-full">
-                    <div class="bg-[#21262d] w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                        <i class="fas fa-cloud-download-alt text-blue-400 text-xl"></i>
+                    <div class="bg-blue-50 w-12 h-12 rounded-lg flex items-center justify-center mb-4 border border-blue-100">
+                        <i class="fas fa-cloud-download-alt text-blue-500 text-xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-2">Electromagnetism Notes</h3>
-                    <p class="text-[#8b949e] text-sm mb-6 flex-grow">Premium colored handwritten notes by Saem Sir. Hosted securely on AWS.</p>
-                    <div class="flex items-center justify-between mt-auto pt-4 border-t border-[#30363d]">
-                        <span class="text-lg font-bold text-white">₹149</span>
-                        <button class="bg-[#f6c65b] text-black px-4 py-2 rounded font-semibold text-sm hover:bg-[#e5b54a] transition flex items-center">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Electromagnetism Notes</h3>
+                    <p class="text-gray-600 text-sm mb-6 flex-grow">Premium colored handwritten notes by Saem Sir. Hosted securely on AWS.</p>
+                    <div class="flex items-center justify-between mt-auto pt-4 border-t border-gray-100">
+                        <span class="text-lg font-bold text-gray-900">₹149</span>
+                        <button class="bg-gray-900 text-white px-4 py-2 rounded font-bold text-sm hover:bg-gray-800 transition flex items-center shadow-sm">
                             <i class="fab fa-aws mr-2 text-lg"></i> Access
                         </button>
                     </div>
@@ -223,14 +226,14 @@
 
                 <!-- Card 3 -->
                 <div class="khazana-card rounded-xl p-6 flex flex-col h-full">
-                    <div class="bg-[#21262d] w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                        <i class="fas fa-book text-green-400 text-xl"></i>
+                    <div class="bg-green-50 w-12 h-12 rounded-lg flex items-center justify-center mb-4 border border-green-100">
+                        <i class="fas fa-book text-[#059669] text-xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-2">Formula Master Book</h3>
-                    <p class="text-[#8b949e] text-sm mb-6 flex-grow">All essential derivations and formulas in one digital module.</p>
-                    <div class="flex items-center justify-between mt-auto pt-4 border-t border-[#30363d]">
-                        <span class="text-lg font-bold text-white">Free</span>
-                        <a href="https://t.me/easyphysicsclasses" target="_blank" class="bg-[#238636] text-white px-4 py-2 rounded font-semibold text-sm hover:bg-[#2ea043] transition text-center">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Formula Master Book</h3>
+                    <p class="text-gray-600 text-sm mb-6 flex-grow">All essential derivations and formulas in one digital module.</p>
+                    <div class="flex items-center justify-between mt-auto pt-4 border-t border-gray-100">
+                        <span class="text-lg font-bold text-[#059669]">Free</span>
+                        <a href="https://t.me/easyphysicsclasses" target="_blank" class="bg-[#059669] text-white px-4 py-2 rounded font-bold text-sm hover:bg-[#047857] transition text-center shadow-sm">
                             Download PDF
                         </a>
                     </div>
@@ -240,14 +243,14 @@
     </section>
 
     <!-- Deep Physics Books Section -->
-    <section class="py-16 bg-[#161b22] border-y border-[#30363d]">
+    <section class="py-16 bg-white">
         <div class="max-w-4xl mx-auto px-4 text-center">
-            <h2 class="math-font text-3xl font-bold text-white mb-6">Deep Physics Books</h2>
-            <div class="bg-[#0d1117] p-8 rounded-2xl border border-[#30363d] inline-block w-full max-w-2xl shadow-xl">
-                <i class="fas fa-book-open text-5xl text-[#58a6ff] mb-4"></i>
-                <h3 class="text-2xl font-bold text-white mb-2">Master the Core Concepts</h3>
-                <p class="text-[#8b949e] mb-6">Enhance your problem-solving capability with the highly recommended reading material curated specifically for our students.</p>
-                <a href="https://amzn.in/d/06cnzCiR" target="_blank" class="inline-flex items-center bg-transparent border border-[#58a6ff] text-[#58a6ff] hover:bg-[#58a6ff] hover:text-white px-6 py-3 rounded-lg font-bold transition">
+            <h2 class="math-font text-3xl font-bold text-gray-900 mb-6">Deep Physics Books</h2>
+            <div class="bg-gray-50 p-8 rounded-2xl border border-gray-200 inline-block w-full max-w-2xl shadow-lg">
+                <i class="fas fa-book-open text-5xl text-[#059669] mb-4"></i>
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">Master the Core Concepts</h3>
+                <p class="text-gray-600 mb-6">Enhance your problem-solving capability with the highly recommended reading material curated specifically for our students.</p>
+                <a href="https://amzn.in/d/06cnzCiR" target="_blank" class="inline-flex items-center bg-white border-2 border-[#059669] text-[#059669] hover:bg-[#059669] hover:text-white px-6 py-3 rounded-lg font-bold transition shadow-sm">
                     <i class="fab fa-amazon mr-2"></i> Get it on Amazon
                 </a>
             </div>
@@ -255,17 +258,17 @@
     </section>
 
     <!-- Predicted Questions Section -->
-    <section id="predicted" class="py-20 bg-[#0d1117]">
+    <section id="predicted" class="py-20 bg-gray-50 border-y border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
-                <h2 class="math-font text-3xl md:text-4xl font-bold text-white mb-4">AI Predicted Exam Questions</h2>
-                <p class="text-[#8b949e]">Top 40 highly probable interactive questions for upcoming exams based on algorithmic pattern analysis.</p>
+                <h2 class="math-font text-3xl md:text-4xl font-bold text-gray-900 mb-4">AI Predicted Exam Questions</h2>
+                <p class="text-gray-500 text-lg">Top 40 highly probable interactive questions for upcoming exams based on algorithmic pattern analysis.</p>
             </div>
             
-            <div class="bg-[#161b22] border border-[#30363d] rounded-xl overflow-hidden shadow-2xl max-w-4xl mx-auto">
-                <div class="bg-[#21262d] px-6 py-4 border-b border-[#30363d] flex justify-between items-center">
-                    <span class="font-bold text-white"><i class="fas fa-robot text-[#58a6ff] mr-2"></i> Interactive Prediction Bank</span>
-                    <span class="text-xs bg-[#238636] text-white px-2 py-1 rounded">Live Sync</span>
+            <div class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-xl max-w-4xl mx-auto">
+                <div class="bg-gray-100 px-6 py-4 border-b border-gray-200 flex justify-between items-center">
+                    <span class="font-bold text-gray-900"><i class="fas fa-robot text-[#059669] mr-2"></i> Interactive Prediction Bank</span>
+                    <span class="text-xs bg-[#059669] text-white px-2 py-1 rounded font-bold">Live Sync</span>
                 </div>
                 <div class="h-[400px] overflow-y-auto p-2 scroll-smooth" id="questionList">
                     <!-- JS will dynamically populate 40 questions here -->
@@ -275,30 +278,30 @@
     </section>
 
     <!-- Contact & Enquiry Form & Map -->
-    <section id="contact" class="py-20 bg-[#161b22] border-t border-[#30363d]">
+    <section id="contact" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
                 
                 <!-- Enquiry Form -->
-                <div>
-                    <h2 class="math-font text-3xl font-bold text-white mb-6">Enquire Now</h2>
+                <div class="bg-white p-8 rounded-2xl border border-gray-200 shadow-lg">
+                    <h2 class="math-font text-3xl font-bold text-gray-900 mb-6">Enquire Now</h2>
                     <form action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
                         <input type="hidden" name="access_key" value="b2b598ce-2ae0-4a70-8430-c5e51d5fc641">
                         <input type="hidden" name="subject" value="New Website Enquiry - Saem Physics">
                         
                         <div>
-                            <label class="block text-sm font-medium text-[#8b949e] mb-2">Student Name</label>
-                            <input type="text" name="name" required class="w-full bg-[#0d1117] border border-[#30363d] rounded-md px-4 py-3 text-white focus:outline-none focus:border-[#58a6ff] transition">
+                            <label class="block text-sm font-bold text-gray-700 mb-2">Student Name</label>
+                            <input type="text" name="name" required class="w-full bg-gray-50 border border-gray-300 rounded-md px-4 py-3 text-gray-900 focus:outline-none focus:border-[#059669] focus:ring-1 focus:ring-[#059669] transition">
                         </div>
                         
                         <div>
-                            <label class="block text-sm font-medium text-[#8b949e] mb-2">Mobile Number</label>
-                            <input type="tel" name="phone" required class="w-full bg-[#0d1117] border border-[#30363d] rounded-md px-4 py-3 text-white focus:outline-none focus:border-[#58a6ff] transition">
+                            <label class="block text-sm font-bold text-gray-700 mb-2">Mobile Number</label>
+                            <input type="tel" name="phone" required class="w-full bg-gray-50 border border-gray-300 rounded-md px-4 py-3 text-gray-900 focus:outline-none focus:border-[#059669] focus:ring-1 focus:ring-[#059669] transition">
                         </div>
 
                         <div>
-                            <label class="block text-sm font-medium text-[#8b949e] mb-2">Select Course</label>
-                            <select name="course" required class="w-full bg-[#0d1117] border border-[#30363d] rounded-md px-4 py-3 text-white focus:outline-none focus:border-[#58a6ff] transition">
+                            <label class="block text-sm font-bold text-gray-700 mb-2">Select Course</label>
+                            <select name="course" required class="w-full bg-gray-50 border border-gray-300 rounded-md px-4 py-3 text-gray-900 focus:outline-none focus:border-[#059669] focus:ring-1 focus:ring-[#059669] transition">
                                 <option value="" disabled selected>Choose your target</option>
                                 <option value="NEET">NEET</option>
                                 <option value="JEE Main">JEE Main</option>
@@ -307,39 +310,39 @@
                             </select>
                         </div>
 
-                        <button type="submit" class="w-full accent-bg accent-hover text-white font-bold py-3 px-4 rounded-md transition">
+                        <button type="submit" class="w-full accent-bg accent-hover text-white font-bold py-3 px-4 rounded-md transition shadow-md">
                             Submit Details
                         </button>
                     </form>
                 </div>
 
                 <!-- Location / Contact Info -->
-                <div>
-                    <h2 class="math-font text-3xl font-bold text-white mb-6">Contact & Location</h2>
+                <div class="flex flex-col justify-center">
+                    <h2 class="math-font text-3xl font-bold text-gray-900 mb-6">Contact & Location</h2>
                     
-                    <div class="space-y-4 text-[#8b949e] mb-8">
+                    <div class="space-y-4 text-gray-700 mb-8 font-medium">
                         <p class="flex items-start">
-                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-[#58a6ff]"></i>
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-[#059669] text-xl"></i>
                             <span>Saem Physics | NEET JEE MIT<br>Vigyan Nagar, Kota, Rajasthan</span>
                         </p>
                         <p class="flex items-center">
-                            <i class="fas fa-phone mr-3 text-[#58a6ff]"></i>
-                            <a href="tel:+917033131480" class="hover:text-white transition">+91 7033131480</a>
+                            <i class="fas fa-phone mr-3 text-[#059669] text-xl"></i>
+                            <a href="tel:+917033131480" class="hover:text-[#059669] transition">+91 7033131480</a>
                         </p>
                     </div>
 
-                    <!-- Map Placeholder Embed -->
-                    <div class="w-full h-64 bg-[#0d1117] border border-[#30363d] rounded-lg overflow-hidden relative">
+                    <!-- Normal White Theme Map -->
+                    <div class="w-full h-64 bg-gray-100 border border-gray-200 rounded-lg overflow-hidden relative shadow-md">
                         <iframe 
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14436.425126084478!2d75.8504!3d25.1481!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDA4JzUzLjIiTiA3NcKwNTEnMDEuNCJF!5e0!3m2!1sen!2sin!4v1690000000000!5m2!1sen!2sin" 
                             width="100%" 
                             height="100%" 
-                            style="border:0; filter: invert(90%) hue-rotate(180deg);" 
+                            style="border:0;" 
                             allowfullscreen="" 
                             loading="lazy" 
                             referrerpolicy="no-referrer-when-downgrade">
                         </iframe>
-                        <a href="https://share.google/lWJEBzQATQdIITkKn" target="_blank" class="absolute bottom-4 right-4 bg-black/70 backdrop-blur text-white px-4 py-2 text-sm rounded border border-gray-600 hover:bg-black transition font-semibold shadow-lg">Open in Google Maps</a>
+                        <a href="https://share.google/lWJEBzQATQdIITkKn" target="_blank" class="absolute bottom-4 right-4 bg-white text-gray-900 px-4 py-2 text-sm rounded border border-gray-300 hover:bg-gray-50 transition font-bold shadow-lg">Open in Google Maps</a>
                     </div>
                 </div>
             </div>
@@ -347,26 +350,26 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-[#010409] py-12 border-t border-[#30363d]">
+    <footer class="bg-gray-50 py-12 border-t border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
             <div class="mb-6 md:mb-0 text-center md:text-left">
-                <span class="math-font text-2xl font-bold text-white tracking-wider">Saem<span class="accent-text">Physics</span></span>
-                <p class="text-[#8b949e] text-sm mt-2">Vigyan Nagar, Kota, Rajasthan</p>
+                <span class="math-font text-2xl font-bold text-gray-900 tracking-wider">Saem<span class="accent-text">Physics</span></span>
+                <p class="text-gray-500 text-sm mt-2 font-medium">Vigyan Nagar, Kota, Rajasthan</p>
             </div>
             
             <div class="flex space-x-6">
-                <a href="https://youtube.com/@SaemPhysics" target="_blank" class="w-10 h-10 rounded-full bg-[#161b22] flex items-center justify-center text-[#8b949e] hover:text-[#ff0000] hover:bg-[#21262d] transition border border-[#30363d]">
+                <a href="https://youtube.com/@SaemPhysics" target="_blank" class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-gray-500 hover:text-[#ff0000] hover:bg-gray-100 transition border border-gray-200 shadow-sm">
                     <i class="fab fa-youtube text-lg"></i>
                 </a>
-                <a href="https://t.me/easyphysicsclasses" target="_blank" class="w-10 h-10 rounded-full bg-[#161b22] flex items-center justify-center text-[#8b949e] hover:text-[#0088cc] hover:bg-[#21262d] transition border border-[#30363d]">
+                <a href="https://t.me/easyphysicsclasses" target="_blank" class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-gray-500 hover:text-[#0088cc] hover:bg-gray-100 transition border border-gray-200 shadow-sm">
                     <i class="fab fa-telegram text-lg"></i>
                 </a>
-                <a href="https://wa.me/917033131480" target="_blank" class="w-10 h-10 rounded-full bg-[#161b22] flex items-center justify-center text-[#8b949e] hover:text-[#25D366] hover:bg-[#21262d] transition border border-[#30363d]">
+                <a href="https://wa.me/917033131480" target="_blank" class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-gray-500 hover:text-[#25D366] hover:bg-gray-100 transition border border-gray-200 shadow-sm">
                     <i class="fab fa-whatsapp text-lg"></i>
                 </a>
             </div>
         </div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 pt-8 border-t border-[#30363d] text-center text-[#8b949e] text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 pt-8 border-t border-gray-200 text-center text-gray-500 text-sm font-medium">
             &copy; 2026 Saem Physics. All rights reserved. Designed for Aspirants.
         </div>
     </footer>
@@ -379,13 +382,13 @@
         for(let i=1; i<=40; i++) {
             const topic = topics[Math.floor(Math.random() * topics.length)];
             const div = document.createElement('div');
-            div.className = 'p-4 border-b border-[#30363d] hover:bg-[#21262d] transition cursor-pointer flex justify-between items-center group';
+            div.className = 'p-4 border-b border-gray-100 hover:bg-gray-50 transition cursor-pointer flex justify-between items-center group';
             div.innerHTML = `
                 <div>
-                    <span class="text-[#58a6ff] font-bold mr-3">Q${i}.</span>
-                    <span class="text-[#c9d1d9] text-sm font-medium">Identify the optimal trajectory in a system bound by ${topic} laws...</span>
+                    <span class="text-[#059669] font-bold mr-3">Q${i}.</span>
+                    <span class="text-gray-700 text-sm font-medium">Identify the optimal trajectory in a system bound by ${topic} laws...</span>
                 </div>
-                <button class="text-xs bg-[#30363d] text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition">View Solution</button>
+                <button class="text-xs bg-gray-200 text-gray-800 font-bold px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition">View Solution</button>
             `;
             qList.appendChild(div);
         }
@@ -403,7 +406,6 @@
         const videoGrid = document.getElementById('videoGrid');
         
         playlists.forEach((playlistId, idx) => {
-            // Generates a random video starting index from the playlist on each load
             const randomVideoIndex = Math.floor(Math.random() * 5) + 1; 
             
             const wrapper = document.createElement('div');
@@ -419,23 +421,11 @@
                     </iframe>
                 </div>
                 <div class="mt-4 px-2">
-                    <h4 class="text-white font-semibold">Deep Lecture Module ${idx+1}</h4>
-                    <p class="text-xs text-[#8b949e] mt-1">Sourced from Playlists</p>
+                    <h4 class="text-gray-900 font-bold">Deep Lecture Module ${idx+1}</h4>
+                    <p class="text-xs text-gray-500 mt-1 font-medium">Sourced from Playlists</p>
                 </div>
             `;
             videoGrid.appendChild(wrapper);
-        });
-
-        // Add subtle glassmorphism effect to Nav on scroll
-        window.addEventListener('scroll', () => {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 10) {
-                nav.style.backgroundColor = 'rgba(13, 17, 23, 0.95)';
-                nav.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.5)';
-            } else {
-                nav.style.backgroundColor = 'rgba(13, 17, 23, 0.85)';
-                nav.style.boxShadow = 'none';
-            }
         });
     </script>
 </body>
